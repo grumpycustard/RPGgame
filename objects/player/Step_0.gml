@@ -1,24 +1,44 @@
 // GET INPUTS -------------------------------------------------------------------------------------
 inputs_scr();
 
-// SET PLAYER MOVEMENT DIRECTION AND SPEED --------------------------------------------------------
-var x_spd = (right - left);
-var y_spd = (down - up);
-
-if (x_spd != 0) && (y_spd != 0)
+if (state = states.normal)
 {
-	movespd = movediagonal;
+	// SET PLAYER MOVEMENT DIRECTION AND SPEED --------------------------------------------------------
+	x_spd = (right - left) * movespd;
+	y_spd = (down - up) * movespd;
+
+	if (x_spd != 0) && (y_spd != 0)
+	{
+		movespd = movediagonal;
+	}
+	else movespd = movestraight;
+
+	if (run)
+	{
+		movespd *= 2;
+	}
+
+	if (y_spd < 0) angle = 1;
+	if (y_spd > 0) angle = 3;
+	if (x_spd < 0) angle = 2;
+	if (x_spd > 0) angle = 0;
+
+	// COLLISION AND MOVEMENT -------------------------------------------------------------------------
+	collision_scr();
+
+	// ANIMATION --------------------------------------------------------------------------------------
+	sprite_index = anim[angle];
+	if (x_spd == 0 && y_spd == 0)
+	{
+		image_speed = 0;
+		image_index = 0;
+	}
+	else if (run)
+	{
+		image_speed = 1.5;
+	}
+	else
+	{
+		image_speed = 1;
+	}
 }
-else movespd = movestraight;
-
-if (y_spd < 0) angle = 1;
-if (y_spd > 0) angle = 3;
-if (x_spd < 0) angle = 2;
-if (x_spd > 0) angle = 0;
-
-// MOVE PLAYER OBJECT -----------------------------------------------------------------------------
-x += (x_spd * movespd);
-y += (y_spd * movespd);
-
-// ANIMATION --------------------------------------------------------------------------------------
-sprite_index = anim[angle];
