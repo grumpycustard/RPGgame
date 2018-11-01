@@ -22,3 +22,9 @@ anim[3] = walk_down;
 
 // SET INITIAL STATE ------------------------------------------------------------------------------
 state = states.normal;
+
+// INITIALISE PLAYER INVENTORY --------------------------------------------------------------------
+bag = 1;
+showinv = false;
+
+playerinv = instance_create_layer(0, 0, "inventory", inv_obj);
