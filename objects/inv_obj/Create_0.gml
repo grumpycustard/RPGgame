@@ -3,6 +3,8 @@ invheight = 4;
 invsize = invwidth*invheight;
 maxitems = player.bag * invwidth;
 
+selected = 0;
+
 items_scr();
 
 for (var i = 0; i < invsize; i ++)
