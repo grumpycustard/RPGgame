@@ -5,12 +5,17 @@ if (showinv)
 	exit;
 }
 
+// CONTROL HUNGER, THIRST AND ENERGY---------------------------------------------------------------
+hunger = clamp(hunger, 0, 100);
+thirst = clamp(thirst, 0, 100);
+energy = clamp(energy, 0, 100);
+
 // GET INPUTS -------------------------------------------------------------------------------------
 inputs_scr();
 
 if (state = states.normal)
 {
-	// SET PLAYER MOVEMENT DIRECTION AND SPEED --------------------------------------------------------
+	// SET PLAYER MOVEMENT DIRECTION AND SPEED ----------------------------------------------------
 	x_spd = (right - left) * movespd;
 	y_spd = (down - up) * movespd;
 
@@ -30,10 +35,10 @@ if (state = states.normal)
 	if (x_spd < 0) angle = 2;
 	if (x_spd > 0) angle = 0;
 
-	// COLLISION AND MOVEMENT -------------------------------------------------------------------------
+	// COLLISION AND MOVEMENT ---------------------------------------------------------------------
 	collision_scr();
 
-	// ANIMATION --------------------------------------------------------------------------------------
+	// ANIMATION ----------------------------------------------------------------------------------
 	sprite_index = anim[angle];
 	if (x_spd == 0 && y_spd == 0)
 	{

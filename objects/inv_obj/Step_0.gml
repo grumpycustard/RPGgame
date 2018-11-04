@@ -42,7 +42,26 @@ if (onedown)
 }
 #endregion
 
+if (drop)
+{
+	var slot = inv_obj.selected;
+	// create item dropped
+	var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
+	// set items image index
+	i.image_index = inv_obj.inventory[slot,0];
+	inv_drop_scr();
+}
 if (action)
 {
-	inv_drop_scr();
+	
+}
+if (use)
+{
+	if (global.item[inventory[selected,0],2] == 0)
+	{
+		player.hunger += global.item[inventory[selected,0],3];
+		player.thirst += global.item[inventory[selected,0],4];
+		player.energy += global.item[inventory[selected,0],5];
+		inv_drop_scr();
+	}
 }
