@@ -31,3 +31,12 @@ if (player.bloodloss < 100)
 {
 	draw_sprite_ext(statbar_spr, 0, xx + (spacing*4), yy + spacing + height, 1, -(bloo/2), 0, c_red, 1);
 }
+
+// DRAW TIME AND DAYS SURVIVED --------------------------------------------------------------------
+var x2 = xx + camera_get_view_width(view_camera[0]);
+
+draw_text(x2 - (spacing*5), yy + (spacing*1), "Minutes: " + string(minutes - (60*hours)));
+draw_text(x2 - (spacing*5), yy + (spacing*2), "Hours: " + string(hours - (24*(days))));
+draw_text(x2 - (spacing*5), yy + (spacing*3), "Days: " + string(days));
+
+
