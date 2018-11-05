@@ -65,3 +65,9 @@ if (use)
 		inv_drop_scr();
 	}
 }
+
+// clamp player stat values
+player.hunger = clamp(player.hunger, 0, 100);
+player.thirst = clamp(player.thirst, 0, 100);
+player.energy = clamp(player.energy, 0, 100);
+player.bloodloss = clamp(player.bloodloss, 0, 100);

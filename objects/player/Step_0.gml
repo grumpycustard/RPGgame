@@ -5,11 +5,6 @@ if (showinv)
 	exit;
 }
 
-// CONTROL HUNGER, THIRST AND ENERGY---------------------------------------------------------------
-hunger = clamp(hunger, 0, 100);
-thirst = clamp(thirst, 0, 100);
-energy = clamp(energy, 0, 100);
-
 // GET INPUTS -------------------------------------------------------------------------------------
 inputs_scr();
 

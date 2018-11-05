@@ -15,9 +15,10 @@ movediagonal = 3;
 movestraight = 4;
 
 // PLAYER STATS -----------------------------------------------------------------------------------
-hunger = 100;
-thirst = 100;
-energy = 100;
+hunger = 5;
+thirst = 30;
+energy = 40;
+bloodloss = 100;
 
 // ANIMATION ARRAY --------------------------------------------------------------------------------
 anim[0] = walk_right;
