@@ -1,9 +1,9 @@
 // INITIALISE VARIABLES ---------------------------------------------------------------------------
 draw_set_font(normal_fnt);
-scale_for_devices_scr(4);
+scale_for_devices_scr(2);
 
 // GLOBAL VARIABLES -------------------------------------------------------------------------------
-globalvar daytimer, pause;
+globalvar daytimer, gamespeed, pause, time;
 pause = false;
 
 // game time variables

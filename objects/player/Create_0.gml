@@ -15,10 +15,25 @@ movediagonal = 3;
 movestraight = 4;
 
 // PLAYER STATS -----------------------------------------------------------------------------------
-hunger = 5;
-thirst = 30;
-energy = 40;
+hunger = 100;
+thirst = 100;
+energy = 100;
 bloodloss = 100;
+
+hungerrate = 0.06;
+thirstrate = 0.1;
+energyrate = 0.05;
+healrate = 0.01;
+
+// PLAYER INJURIES --------------------------------------------------------------------------------
+effect[0,0] = "Bleeding";
+effect[0,1] = false;
+effect[1,0] = "Infection";
+effect[1,1] = false;
+effect[2,0] = "Fever";
+effect[2,1] = false;
+effect[3,0] = "Sickness";
+effect[3,1] = false;
 
 // ANIMATION ARRAY --------------------------------------------------------------------------------
 anim[0] = walk_right;

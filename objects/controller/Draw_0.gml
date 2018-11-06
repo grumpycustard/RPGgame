@@ -4,10 +4,6 @@ var yy = camera_get_view_y(view_camera[0]);
 
 var spacing = sprite_get_width(statbox_spr);
 var height  = sprite_get_height(statbox_spr) - 4;
-var hung = player.hunger;
-var thir = player.thirst;
-var ener = player.energy;
-var bloo = player.bloodloss;
 
 // DRAW STATBOXES ---------------------------------------------------------------------------------
 // determine if bloodloss needs to be drawn
@@ -22,6 +18,12 @@ for (var i = 0; i < b; i ++)
 {
 	draw_sprite(statbox_spr, 0, xx + spacing + (spacing * i), yy + spacing);
 }
+
+// clamp values
+var hung = clamp(player.hunger, 0, 100);
+var thir = clamp(player.thirst, 0, 100);
+var ener = clamp(player.energy, 0, 100);
+var bloo = clamp(player.bloodloss, 0, 100);
 
 // draw stat bars
 draw_sprite_ext(statbar_spr, 0, xx + spacing, yy + spacing + height, 1, -(hung/2), 0, c_orange, 1);

@@ -5,11 +5,26 @@ if (showinv)
 	exit;
 }
 
+// clamp player stat values
+hunger = clamp(hunger, 0, 100);
+thirst = clamp(thirst, 0, 100);
+energy = clamp(energy, 0, 100);
+bloodloss = clamp(bloodloss, 0, 100);
+
 // GET INPUTS -------------------------------------------------------------------------------------
 inputs_scr();
 
 if (state = states.normal)
 {
+	// CONTROL PLAYER HUNGER, THIRST, ENERGY AND HEALING ------------------------------------------
+	hunger -= hungerrate*gamespeed;
+	thirst -= thirstrate*gamespeed;
+	energy -= energyrate*gamespeed;
+	if (bloodloss < 100 && !effect[0,1])
+	{
+		bloodloss += healrate*gamespeed;
+	}
+	
 	// SET PLAYER MOVEMENT DIRECTION AND SPEED ----------------------------------------------------
 	x_spd = (right - left) * movespd;
 	y_spd = (down - up) * movespd;
@@ -23,7 +38,9 @@ if (state = states.normal)
 	if (run)
 	{
 		movespd *= 2;
+		energyrate = 0.2;
 	}
+	else energyrate = 0.05;
 
 	if (y_spd < 0) angle = 1;
 	if (y_spd > 0) angle = 3;
@@ -47,5 +64,22 @@ if (state = states.normal)
 	else
 	{
 		image_speed = 0.6;
+	}
+}
+
+if (state = states.sleep)
+{
+	// CONTROL PLAYER HUNGER, THIRST, ENERGY AND HEALING ------------------------------------------
+	hunger -= hungerrate*gamespeed;
+	thirst -= thirstrate*gamespeed;
+	energy += (energyrate * 4)*gamespeed;
+	if (bloodloss < 100 && !effect[0,1])
+	{
+		bloodloss += healrate*gamespeed;
+	}
+	
+	if (energy >= 100) || (action)
+	{
+		state = states.normal;
 	}
 }
