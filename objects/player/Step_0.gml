@@ -59,11 +59,11 @@ if (state = states.normal)
 	}
 	else if (run)
 	{
-		image_speed = 0.8;
+		image_speed = 0.7;
 	}
 	else
 	{
-		image_speed = 0.6;
+		image_speed = 0.5;
 	}
 }
 

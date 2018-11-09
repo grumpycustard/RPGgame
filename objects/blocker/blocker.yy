@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "blocker",
     "eventList": [
-        
+        {
+            "id": "cd5cbc9b-b92a-4085-9033-0355533e6f23",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "4d38f044-3076-4896-b500-9a1e6e1b3b56"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0d282560-1031-4e15-8b5b-5a3fb0594a20",
+            "Value": {
+                "id": "0357a6ca-c0bb-4b07-be68-6a8682580021",
+                "resourcePath": "sprites\\walk_up\\walk_up.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0e8c9e47-6771-4989-929b-d1a5d856bedb",
             "Value": {
                 "id": "ad8f4a87-7dba-452c-9b25-93ece9cf4b37",
@@ -191,6 +199,14 @@
             }
         },
         {
+            "Key": "783a90cf-c794-4bb9-ab95-691506719a29",
+            "Value": {
+                "id": "ac13fc25-b340-468c-9a9a-47d0864bf429",
+                "resourcePath": "sprites\\walk_left\\walk_left.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7b6b1c20-3c44-4782-8377-d155356bafa6",
             "Value": {
                 "id": "e3410c0e-cbd5-4f4d-b67b-ac1253605b4a",
@@ -255,14 +271,6 @@
             }
         },
         {
-            "Key": "982842cc-28cb-4a24-b974-06ace6b5f55c",
-            "Value": {
-                "id": "aac46433-1184-45ca-9259-2c79c10a7fba",
-                "resourcePath": "sprites\\walk_up\\walk_up.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "9f6009a7-90b9-4e5c-927e-936176f0e810",
             "Value": {
                 "id": "930a5d51-e35f-420f-8366-67d172d9014f",
@@ -300,14 +308,6 @@
                 "id": "079865a0-9456-4ae9-93a1-f9c954b6cb75",
                 "resourcePath": "objects\\nightcycle\\nightcycle.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "c5d5ba4a-3fbb-4c76-8b74-daeda65bd9cb",
-            "Value": {
-                "id": "ee3db144-bc53-4861-894c-6ea9e2712b9a",
-                "resourcePath": "sprites\\walk_left\\walk_left.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
