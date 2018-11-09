@@ -25,6 +25,24 @@ if (state = states.normal)
 		bloodloss += healrate*gamespeed;
 	}
 	
+	// PICK UP ITEMS ------------------------------------------------------------------------------
+	pickup = instance_nearest(x, y, item);
+	with (item)
+	{
+		if (id == player.pickup && distance_to_object(player) < 10)
+		{
+			closest = true;
+			if (player.action)
+			{
+				if (inv_add_scr(player.pickup.image_index) == 1)
+				{
+					instance_destroy(player.pickup);
+				}
+			}
+		}
+		else closest = false;
+	}
+	
 	// SET PLAYER MOVEMENT DIRECTION AND SPEED ----------------------------------------------------
 	x_spd = (right - left) * movespd;
 	y_spd = (down - up) * movespd;

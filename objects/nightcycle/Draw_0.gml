@@ -20,7 +20,7 @@ draw_rectangle(0, 0, x1 + 20, y1 + 20, 0);
 if (a > 0.5)
 {
 	gpu_set_blendmode(bm_subtract);
-	draw_sprite_ext(glow_spr, 0, player.x - xx + 8, player.y - yy, 2, 2, 0, -1, a-0.5);
+	draw_sprite_ext(glow_spr, 0, player.x - xx, player.y - yy - 12, 12, 12, 0, -1, a-0.5);
 	gpu_set_blendmode(bm_normal);
 }
 

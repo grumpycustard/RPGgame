@@ -14,6 +14,8 @@ y_spd = 0;
 movediagonal = 3;
 movestraight = 4;
 
+pickup = -1;
+
 // PLAYER STATS -----------------------------------------------------------------------------------
 hunger = 100;
 thirst = 100;
