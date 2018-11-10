@@ -1,0 +1,1 @@
+bloodloss += 0.1;

@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "0d282560-1031-4e15-8b5b-5a3fb0594a20",
-            "Value": {
-                "id": "0357a6ca-c0bb-4b07-be68-6a8682580021",
-                "resourcePath": "sprites\\walk_up\\walk_up.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "0e8c9e47-6771-4989-929b-d1a5d856bedb",
             "Value": {
                 "id": "ad8f4a87-7dba-452c-9b25-93ece9cf4b37",
@@ -151,6 +143,14 @@
             }
         },
         {
+            "Key": "48e50be0-21ca-41eb-ab15-3f517cba42da",
+            "Value": {
+                "id": "34f73a79-1a82-43e5-bc23-915970d50f34",
+                "resourcePath": "sprites\\walk_left\\walk_left.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4d38f044-3076-4896-b500-9a1e6e1b3b56",
             "Value": {
                 "id": "6cd23fe4-84f7-40c6-92c6-acf988f56e76",
@@ -204,14 +204,6 @@
                 "id": "68ccbc2b-2698-4fa6-a9dd-21f9eccb7b3c",
                 "resourcePath": "objects\\player\\player.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "783a90cf-c794-4bb9-ab95-691506719a29",
-            "Value": {
-                "id": "ac13fc25-b340-468c-9a9a-47d0864bf429",
-                "resourcePath": "sprites\\walk_left\\walk_left.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -453,6 +445,14 @@
                 "resourcePath": "views\\f9428431-f378-42e5-a13f-f53681556904.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "fd2f2a4b-c6ea-4f65-9f46-347c04cb9a4c",
+            "Value": {
+                "id": "1caa797a-73dc-441f-8a21-c7cee1df9803",
+                "resourcePath": "sprites\\walk_up\\walk_up.yy",
+                "resourceType": "GMSprite"
+            }
         }
     ],
     "script_order": [
@@ -460,12 +460,12 @@
         "d02a924d-38d5-4fbc-8747-b8eaa2040c14",
         "09b76264-ffce-4ba8-9b08-2ccca92fa5d3",
         "43830ce4-3dbd-4ac4-8d91-f04e0e28ac47",
+        "938e4e24-69a9-43d0-b50b-ce9146bace61",
+        "ebeb0850-6791-4e08-9f4b-73e27d564204",
         "47878362-de9b-43ca-bedf-fc2ad7bff905",
         "0fdcfa6f-6d03-4752-897b-289cb8ddbdc4",
         "0f952858-a88f-41d2-8d97-75ecccad1dc1",
-        "ed9dc8b8-1b89-4cdb-9f5d-a45ea5a096b1",
-        "938e4e24-69a9-43d0-b50b-ce9146bace61",
-        "ebeb0850-6791-4e08-9f4b-73e27d564204"
+        "ed9dc8b8-1b89-4cdb-9f5d-a45ea5a096b1"
     ],
     "tutorial": ""
 }

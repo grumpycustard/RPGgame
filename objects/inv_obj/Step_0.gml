@@ -65,6 +65,7 @@ if (use)
 		player.hunger += global.item[inventory[selected,0],3];
 		player.thirst += global.item[inventory[selected,0],4];
 		player.energy += global.item[inventory[selected,0],5];
+		player.stamina -= global.item[inventory[selected,0],6];
 		inv_drop_scr();
 	}
 }

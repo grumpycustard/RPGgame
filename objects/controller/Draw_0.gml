@@ -43,7 +43,7 @@ draw_text(x2 - (spacing*5), yy + (spacing*2), "Hours: " + string(hours - (24*(da
 draw_text(x2 - (spacing*5), yy + (spacing*3), "Days: " + string(days));
 
 // DRAW PLAYER STAMINA ----------------------------------------------------------------------------
-draw_pie(xx + (spacing * 2.5), yy + height + 40, bloo, 100, c_white, 20, 1, bloodloss_spr);
+draw_pie(xx + (spacing * 2.5), yy + height + 40, bloo, 100, c_red, 20, 1, bloodloss_spr);
 if (bloo >= 90)
 {
 	alpha_s += flash_s;
