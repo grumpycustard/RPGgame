@@ -20,9 +20,9 @@ if (state = states.normal)
 	hunger -= hungerrate*gamespeed;
 	thirst -= thirstrate*gamespeed;
 	energy -= energyrate*gamespeed;
-	if (bloodloss < 100 && !effect[0,1])
+	if (bloodloss > 0 && !effect[0,1])
 	{
-		bloodloss += healrate*gamespeed;
+		bloodloss -= healrate*gamespeed;
 	}
 	
 	// PICK UP ITEMS ------------------------------------------------------------------------------
@@ -53,13 +53,9 @@ if (state = states.normal)
 	}
 	else movespd = movestraight;
 
-	if (run)
-	{
-		movespd *= 2;
-		energyrate = 0.2;
-	}
-	else energyrate = 0.05;
-
+	// PLAYER RUNNNING AND STAMINA ----------------------------------------------------------------
+	stamina_scr(stamina - (energy - (energy / 4)));
+	
 	if (y_spd < 0) angle = 1;
 	if (y_spd > 0) angle = 3;
 	if (x_spd < 0) angle = 2;
@@ -75,9 +71,9 @@ if (state = states.normal)
 		image_speed = 0;
 		image_index = 0;
 	}
-	else if (run)
+	else if (running)
 	{
-		image_speed = 0.7;
+		image_speed = 0.8;
 	}
 	else
 	{

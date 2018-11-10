@@ -17,3 +17,6 @@ days = 0;
 daytimer = minutes;
 
 instance_create_layer(0, 0, "nightlayer", nightcycle);
+
+flash_s = 1 / (room_speed / 4);
+alpha_s = 0.01;
