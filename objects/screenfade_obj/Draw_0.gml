@@ -1,4 +1,4 @@
-if (!pause) exit;
+if (!player.showinv) exit;
 
 var xpos = camera_get_view_x(view_camera[0]) - 5;
 var ypos = camera_get_view_y(view_camera[0]) - 5;

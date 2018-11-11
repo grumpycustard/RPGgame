@@ -1,6 +1,5 @@
 if (!player.showinv) exit;
 
-
 // DRAW equip_slot SLOTS ---------------------------------------------------------------------------
 draw_self();
 
@@ -23,5 +22,21 @@ if (e != 0)
 {
 	draw_sprite(item_spr, e, x + 4, y - 4);
 }
+
+// DRAW LOADED AMMO FOR RANGED WEAPONS ------------------------------------------------------------
+if (equipmentid == 7)
+{
+	if (inv_obj.equip[7,0] != 0)
+	{
+		draw_text(x+4, y-12, string(inv_obj.equip[7,2]));
+	}
+}
+
+// DRAW REMAINING DURABILITY OF EQUIPPED ITEM -----------------------------------------------------
+if (inv_obj.equip[equipmentid,0] > 0)
+{
+	draw_text(x + 20, y - 12, string(inv_obj.equip[equipmentid,1]) + "%");
+}
+
 
 

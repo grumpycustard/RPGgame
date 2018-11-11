@@ -1,11 +1,20 @@
 // SET INVENTORY SIZE BASED ON PLAYER equip_slot ---------------------------------------------------
 maxitems = player.bag * invwidth;
 
-// SET PAUSE STATE --------------------------------------------------------------------------------
-if (!player.showinv) exit;
-
 // CONTROL INVENTORY NON-MOUSE --------------------------------------------------------------------
 inputs_scr();
+
+// reload equipped ranged weapon
+if (equip[7,0] != 0)
+{
+	if (reload)
+	{
+		alarm_set(0, global.item[equip[7,0] + 1, 5] * room_speed)
+	}
+}
+
+// SET PAUSE STATE --------------------------------------------------------------------------------
+if (!player.showinv) exit;
 
 // toggle menu selection
 if (toggle)
@@ -17,7 +26,7 @@ if (toggle)
 	}
 }
 
-#region// control selection with movement keys
+#region// CONTROL ITEM SELECTION WITH MOVEMENT KEYS
 if (oneright)
 {
 	if (menu == 0)
@@ -96,6 +105,7 @@ if (onedown)
 }
 #endregion
 
+#region// CONTROL INVENTORY ITEM USAGE ------------------------------------------------------------
 if (menu == 0)
 {
 	if (drop)
@@ -105,8 +115,9 @@ if (menu == 0)
 		{
 			// create item dropped
 			var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
-			// set items image index
 			i.image_index = inv_obj.inventory[slot,0];
+			i.amount = inv_obj.inventory[slot,1];
+			i.durability = inv_obj.inventory[slot,2];
 			inv_drop_scr();
 		}
 	}
@@ -114,9 +125,14 @@ if (menu == 0)
 	{
 		if (global.item[inventory[menu_slot,0],2] == 1)
 		{
-			if (equip[global.item[inventory[menu_slot,0],3],0] == 0)
+			var it = inventory[menu_slot,0];
+			var eq = global.item[it,3];
+			
+			if (equip[eq,0] == 0)
 			{
-				equip[global.item[inventory[menu_slot,0],3],0] = inventory[menu_slot,0];
+				equip[eq,0] = inventory[menu_slot,0];
+				equip[eq,1] = inventory[menu_slot,2];
+				equip[eq,2] = inventory[menu_slot,1];
 				inv_drop_scr();
 			}
 		}
@@ -133,17 +149,60 @@ if (menu == 0)
 		}
 	}
 }
+#endregion
 
+#region// CONTROL PLAYER EQUIPMENT ----------------------------------------------------------------
 if (menu == 1)
 {
 	if (drop || action || use)
 	{
 		if (equip[equip_slot,0] > 0)
 		{
-			if (inv_add_scr(equip[equip_slot,0]))
+			if (equip_slot == 6)
 			{
+				for (var m = 6; m < maxitems; m++)
+				{
+					while(inventory[m,1] > 0)
+					{
+						// drop additional inventory items
+						var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
+						i.image_index = inv_obj.inventory[m,0];	
+						i.amount = inv_obj.inventory[m,1];
+						inv_dump_scr(m);
+					}
+				}
+				// drop bag
+				var d = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
+				d.image_index = equip[equip_slot,0];
+				equip[6,0] = 0;
+				equip[6,1] = 0;
+			}
+			else if (equip_slot == 7)
+			{
+				inv_add_scr(equip[7,0], equip[7,2], equip[7,1]);
+				equip[7,0] = 0;
+				equip[7,1] = 0;
+				equip[7,2] = 0;
+			}
+			else
+			{
+				inv_add_scr(equip[equip_slot,0], 1, equip[equip_slot,1]);
 				equip[equip_slot,0] = 0;
+				equip[equip_slot,1] = 0;
 			}
 		}
 	}
 }
+#endregion
+
+#region// equip a bag
+if (equip[6,0] != 0)
+{
+	player.bag = global.item[equip[6,0],4];
+}
+else 
+{
+	player.bag = 1;
+}
+#endregion
+

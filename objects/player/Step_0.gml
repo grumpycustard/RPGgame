@@ -34,7 +34,7 @@ if (state = states.normal)
 			closest = true;
 			if (player.action)
 			{
-				if (inv_add_scr(player.pickup.image_index) == 1)
+				if (inv_add_scr(player.pickup.image_index, amount, durability) == 1)
 				{
 					instance_destroy(player.pickup);
 				}

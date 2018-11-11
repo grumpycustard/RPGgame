@@ -16,6 +16,7 @@ var inv_start_y = yhalf - ((boxwidth / 2) * player.bag);
 var row = 0;
 var column = 0;
 
+// DRAW NINE SLICE BOX FOR INVENTORY --------------------------------------------------------------
 if (menu == 0)
 {
 	var c = c_white;
@@ -24,6 +25,7 @@ else var c = c_gray;
 
 nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag), c);
 
+// DRAW NINE SLICE BOX FOR EQUIPMENT --------------------------------------------------------------
 if (menu == 1)
 {
 	var c1 = c_white;
@@ -32,6 +34,7 @@ else var c1 = c_gray;
 
 nineslice_scr(nine_slice_spr,xpos+670,ypos+160,xpos+810,ypos+350,c1);
 
+// DRAW INVENTORY SLOTS ---------------------------------------------------------------------------
 for (var i = 0; i < maxitems; i ++)
 {
 	// set inventory box position
@@ -65,9 +68,14 @@ for (var i = 0; i < maxitems; i ++)
 	if (inventory[i,0] > 0)
 	{
 		draw_sprite(item_spr, inventory[i,0], xx + 4, yy - 4);
-		if (inventory[i,1] > 1)
+		if (inventory[i,1] > 1 && global.item[inventory[i,0],2] != 1)
 		{
-			draw_text(xx + 1, yy - 9, string(inventory[i,1]));
+			draw_text(xx + 4, yy - 12, string(inventory[i,1]));
+		}
+		
+		if (global.item[inventory[i,0], 2] == 1)
+		{
+			draw_text(xx + 20, yy - 12, string(inventory[i,2]) + "%");
 		}
 	}
 }

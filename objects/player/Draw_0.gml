@@ -1,6 +1,4 @@
 draw_self();
 
-draw_text(x, y+10, string(hunger));
-draw_text(x, y+20, string(thirst));
-draw_text(x, y+30, string(energy));
-draw_text(x, y+40, string(stamina));
+draw_text(x, y+10, string(inv_obj.equip[7,0]));
+draw_text(x, y+20, string(inv_check_scr(14)));
