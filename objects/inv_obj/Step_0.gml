@@ -1,4 +1,4 @@
-// SET INVENTORY SIZE BASED ON PLAYER EQUIPMENT ---------------------------------------------------
+// SET INVENTORY SIZE BASED ON PLAYER equip_slot ---------------------------------------------------
 maxitems = player.bag * invwidth;
 
 // SET PAUSE STATE --------------------------------------------------------------------------------
@@ -7,66 +7,143 @@ if (!player.showinv) exit;
 // CONTROL INVENTORY NON-MOUSE --------------------------------------------------------------------
 inputs_scr();
 
+// toggle menu selection
+if (toggle)
+{
+	menu ++;
+	if (menu >=  max_menu)
+	{
+		menu = 0;
+	}
+}
+
 #region// control selection with movement keys
 if (oneright)
 {
-	selected ++;
-	if (selected >= maxitems)
+	if (menu == 0)
 	{
-		selected = 0;
+		menu_slot ++;
+		if (menu_slot >= maxitems)
+		{
+			menu_slot = 0;
+		}
+	}
+	if (menu == 1)
+	{
+		equip_slot ++;
+		if (equip_slot >= maxequipment)
+		{
+			equip_slot = 0;
+		}
 	}
 }
 if (oneleft)
 {
-	selected --;
-	if (selected < 0)
+	if (menu == 0)
 	{
-		selected = maxitems-1;
+		menu_slot --;
+		if (menu_slot < 0)
+		{
+			menu_slot = maxitems-1;
+		}
+	}
+	if (menu == 1)
+	{
+		equip_slot --;
+		if (equip_slot < 0)
+		{
+			equip_slot = maxequipment - 1;
+		}
 	}
 }
 if (oneup)
 {
-	selected -= invwidth;
-	if (selected < 0)
+	if (menu == 0)
 	{
-		selected += maxitems;
+		menu_slot -= invwidth;
+		if (menu_slot < 0)
+		{
+			menu_slot += maxitems;
+		}
+	}
+	if (menu == 1)
+	{
+		equip_slot --;
+		if (equip_slot < 0)
+		{
+			equip_slot = maxequipment - 1;
+		}
 	}
 }
 if (onedown)
 {
-	selected += invwidth;
-	if (selected >= maxitems)
+	if (menu == 0)
 	{
-		selected -= maxitems;
+		menu_slot += invwidth;
+		if (menu_slot >= maxitems)
+		{
+			menu_slot -= maxitems;
+		}
+	}
+	if (menu == 1)
+	{
+		equip_slot ++;
+		if (equip_slot >= maxequipment)
+		{
+			equip_slot = 0;
+		}
 	}
 }
 #endregion
 
-if (drop)
+if (menu == 0)
 {
-	var slot = inv_obj.selected;
-	if (inv_obj.inventory[slot, 0] > 0)
+	if (drop)
 	{
-		// create item dropped
-		var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
-		// set items image index
-		i.image_index = inv_obj.inventory[slot,0];
-		inv_drop_scr();
+		var slot = inv_obj.menu_slot;
+		if (inv_obj.inventory[slot, 0] > 0)
+		{
+			// create item dropped
+			var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
+			// set items image index
+			i.image_index = inv_obj.inventory[slot,0];
+			inv_drop_scr();
+		}
 	}
-}
-if (action)
-{
-	
-}
-if (use)
-{
-	if (global.item[inventory[selected,0],2] == 0)
+	if (action)
 	{
-		player.hunger += global.item[inventory[selected,0],3];
-		player.thirst += global.item[inventory[selected,0],4];
-		player.energy += global.item[inventory[selected,0],5];
-		player.stamina -= global.item[inventory[selected,0],6];
-		inv_drop_scr();
+		if (global.item[inventory[menu_slot,0],2] == 1)
+		{
+			if (equip[global.item[inventory[menu_slot,0],3],0] == 0)
+			{
+				equip[global.item[inventory[menu_slot,0],3],0] = inventory[menu_slot,0];
+				inv_drop_scr();
+			}
+		}
+	}
+	if (use)
+	{
+		if (global.item[inventory[menu_slot,0],2] == 0)
+		{
+			player.hunger += global.item[inventory[menu_slot,0],3];
+			player.thirst += global.item[inventory[menu_slot,0],4];
+			player.energy += global.item[inventory[menu_slot,0],5];
+			player.stamina -= global.item[inventory[menu_slot,0],6];
+			inv_drop_scr();
+		}
 	}
 }
 
+if (menu == 1)
+{
+	if (drop || action || use)
+	{
+		if (equip[equip_slot,0] > 0)
+		{
+			if (inv_add_scr(equip[equip_slot,0]))
+			{
+				equip[equip_slot,0] = 0;
+			}
+		}
+	}
+}

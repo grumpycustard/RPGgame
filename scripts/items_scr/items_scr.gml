@@ -3,12 +3,28 @@
 	1 = is item stackable? Use weight/size of item to decide
 	2 = Item identifier number
 		0 = edible
+		1 = wearable equipment
 	
 	IF ITEM IS EDIBLE:
 	3 = How much hunger does item restore
 	4 = How much thirst does item restore
 	5 = How much energy does item restore
 	6 = How much stamina does item restore
+	
+	IF ITEM IS EQUIPMENT
+	3 = additional identifier
+		0 = hat
+		1 = body
+		2 = legs
+		3 = feet
+		4 = overbody
+		5 = melee weapon
+		6 = bag
+		7 = ranged weapon
+		
+	4 = warmth rating
+	5 = armour rating
+	6 = durability
 
 
 */
@@ -60,3 +76,12 @@ global.item[5,3] = 0;
 global.item[5,4] = 50;
 global.item[5,5] = 0;
 global.item[5,6] = 5;
+
+global.item[6,0] = "Wool hat";
+global.item[6,1] = false;
+global.item[6,2] = 1;
+global.item[6,3] = 0;
+global.item[6,4] = 2;
+global.item[6,5] = 1;
+global.item[6,6] = 50;
+

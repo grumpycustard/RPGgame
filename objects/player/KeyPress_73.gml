@@ -1,5 +1,10 @@
 if showinv 
 {
 	showinv = false;
+	pause = false;
 }
-else showinv = true;
+else
+{
+	showinv = true;
+	pause = true;
+}

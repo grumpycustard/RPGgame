@@ -5,7 +5,7 @@ var yy = camera_get_view_y(view_camera[0]);
 var x1 = camera_get_view_width(view_camera[0]);
 var y1 = camera_get_view_height(view_camera[0]);
 
-if (!surface_exists(nightcycle))
+if (!surface_exists(nightsurf))
 {
 	nightsurf = surface_create(x1 + 20, y1 + 20);
 }

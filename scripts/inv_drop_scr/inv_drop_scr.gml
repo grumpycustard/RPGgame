@@ -1,4 +1,4 @@
-var slot = inv_obj.selected;
+var slot = inv_obj.menu_slot;
 
 if (inv_obj.inventory[slot,0] > 0)
 {
