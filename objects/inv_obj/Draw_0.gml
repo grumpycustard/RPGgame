@@ -68,7 +68,7 @@ for (var i = 0; i < maxitems; i ++)
 	if (inventory[i,0] > 0)
 	{
 		draw_sprite(item_spr, inventory[i,0], xx + 4, yy - 4);
-		if (inventory[i,1] > 1 && global.item[inventory[i,0],2] != 1)
+		if (inventory[i,1] > 0 && global.item[inventory[i,0],2] != 1)
 		{
 			draw_text(xx + 4, yy - 12, string(inventory[i,1]));
 		}

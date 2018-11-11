@@ -16,6 +16,7 @@ for (var i = 0; i < invsize; i ++)
 	inventory[i,0] = 0; // image index id of sprite
 	inventory[i,1] = 0; // quantity of item/ammo held if stackable
 	inventory[i,2] = 0; // durability of item
+	inventory[i,3] = 0; // guns with loaded ammo
 }
 
 for (var e = 0; e < maxequipment; e ++)

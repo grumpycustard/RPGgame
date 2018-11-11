@@ -111,13 +111,14 @@ if (menu == 0)
 	if (drop)
 	{
 		var slot = inv_obj.menu_slot;
-		if (inv_obj.inventory[slot, 0] > 0)
+		if (inventory[slot, 0] > 0)
 		{
 			// create item dropped
 			var i = instance_create_layer(player.x - 8 + irandom(8), player.y + 4 - irandom(8), "instances", item);
-			i.image_index = inv_obj.inventory[slot,0];
-			i.amount = inv_obj.inventory[slot,1];
-			i.durability = inv_obj.inventory[slot,2];
+			i.image_index = inventory[slot,0];
+			i.amount = 1;
+			i.durability = inventory[slot,2];
+			i.loaded = inventory[slot,3];
 			inv_drop_scr();
 		}
 	}
@@ -132,7 +133,7 @@ if (menu == 0)
 			{
 				equip[eq,0] = inventory[menu_slot,0];
 				equip[eq,1] = inventory[menu_slot,2];
-				equip[eq,2] = inventory[menu_slot,1];
+				equip[eq,2] = inventory[menu_slot,3];
 				inv_drop_scr();
 			}
 		}
@@ -179,7 +180,7 @@ if (menu == 1)
 			}
 			else if (equip_slot == 7)
 			{
-				inv_add_scr(equip[7,0], equip[7,2], equip[7,1]);
+				inv_add_scr(equip[7,0], equip[7,1], equip[7,2]);
 				equip[7,0] = 0;
 				equip[7,1] = 0;
 				equip[7,2] = 0;
