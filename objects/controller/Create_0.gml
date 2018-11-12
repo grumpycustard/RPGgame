@@ -1,10 +1,12 @@
 // INITIALISE VARIABLES ---------------------------------------------------------------------------
 draw_set_font(normal_fnt);
-scale_for_devices_scr(2);
 
 // GLOBAL VARIABLES -------------------------------------------------------------------------------
-globalvar daytimer, gamespeed, pause, time;
+globalvar daytimer, gamespeed, pause, gamescale, time;
 pause = false;
+gamescale = ceil(window_get_width()/1100);
+
+scale_for_devices_scr(2);
 
 // game time variables
 normalgamespeed = 1/room_speed;

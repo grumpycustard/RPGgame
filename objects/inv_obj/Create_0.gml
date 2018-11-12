@@ -9,6 +9,9 @@ menu_slot = 0;		// currently selected inventory slot
 maxequipment = 8;	// max number of equipment slots
 equip_slot = 0;		// player equipment slot currently selected
 
+reloading = false;
+reloadtimer = 0;
+
 items_scr();
 
 for (var i = 0; i < invsize; i ++)

@@ -1,6 +1,8 @@
 // DRAW PLAYER STATS ------------------------------------------------------------------------------
 var xx = camera_get_view_x(view_camera[0]);
 var yy = camera_get_view_y(view_camera[0]);
+var w = camera_get_view_width(view_camera[0]);
+var h = camera_get_view_height(view_camera[0]);
 
 var spacing = sprite_get_width(statbox_spr);
 var height  = sprite_get_height(statbox_spr) - 4;
@@ -52,4 +54,10 @@ if (bloo >= 90)
 		flash_s *= -1;
 	}
 	draw_sprite_ext(bloodloss_spr, 1, xx + (spacing * 2.5), yy + height + 40,1,1,0,-1,alpha_s);
+}
+
+// DRAW RELOADING TIMER ---------------------------------------------------------------------------
+if (inv_obj.reloading == true)
+{
+	draw_pie(xx+(w/2), yy+(h/2), inv_obj.reloadtimer,  global.item[inv_obj.equip[7,0] + 1, 5], c_white, 20, 1, reload_spr);
 }

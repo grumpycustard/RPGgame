@@ -1,5 +1,7 @@
+draw_self();
+
 if (closest)
 {
-	draw_sprite(pickup_closest, 0, x, y);
+	draw_sprite(grounditemhighlight_spr, image_index, x, y);
 }
-draw_self();
+

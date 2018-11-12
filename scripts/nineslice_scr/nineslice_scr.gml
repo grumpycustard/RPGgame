@@ -1,3 +1,11 @@
+///@descNineslice_scr
+///@argSprite
+///@argx1
+///@argy1
+///@argx2
+///@argy2
+///@argcolour
+
 var sprite = argument0;
 var size = sprite_get_width(sprite) / 3;
 var xpos = argument1;

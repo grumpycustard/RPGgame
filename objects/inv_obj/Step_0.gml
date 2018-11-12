@@ -9,7 +9,33 @@ if (equip[7,0] != 0)
 {
 	if (reload)
 	{
-		alarm_set(0, global.item[equip[7,0] + 1, 5] * room_speed)
+		reloading = true;
+	}
+}
+
+// RELOAD EQUIPPED RANGED WEAPON ------------------------------------------------------------------
+if (reloading == true)
+{
+	reloadtimer += 1/room_speed;
+	if (reloadtimer >= global.item[equip[7,0] + 1, 5])
+	{
+		while(equip[7,2] < global.item[equip[7,0], 4])
+		{
+			var slot = inv_check_scr(equip[7,0] + 1);
+			if (slot != -1)
+			{
+				equip[7,2] ++;
+				inv_dump_scr(slot);
+			}
+			else 
+			{
+				reloading = false;
+				reloadtimer = 0;
+				break;
+			}
+		}
+		reloading = false;
+		reloadtimer = 0;
 	}
 }
 

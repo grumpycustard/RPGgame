@@ -1,0 +1,1 @@
+scale_for_devices_scr(2);

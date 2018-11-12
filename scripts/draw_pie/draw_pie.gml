@@ -1,4 +1,4 @@
-/// draw_pie
+/// @desc draw_pie
 /// @arg x
 /// @arg y
 /// @arg value
