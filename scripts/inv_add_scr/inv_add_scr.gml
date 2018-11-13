@@ -1,3 +1,8 @@
+/// @desc inv_add_scr
+/// @arg image index
+/// @arg durability
+/// @arg ammo
+
 // CHECK INVENTORY FOR EXISTING ITEM IF THE SAME TYPE ---------------------------------------------
 for(var i = 0; i < inv_obj.maxitems; i ++)
 {

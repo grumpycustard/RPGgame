@@ -1,27 +1,20 @@
 /// stamina_scr
 // @arg time
-
 if (run)
 {
 	running = true;
 }
-else running = false;
-
-if (tired)
-{
+	
+if (x_spd = 0 && y_spd == 0) || (tired) || (energy == 0)
+{	
 	running = false;
 }
 
-if (x_spd == 0 && y_spd == 0)
-{
-	running = false;
-}
-
-if (running && !tired)
+if (running)
 {
 	x_spd *= 2;
 	y_spd *= 2;
-	stamina += 1 / fitness;
+	stamina += 0.5 / fitness;
 	if (stamina >= energy)
 	{
 		tired = true;
@@ -29,7 +22,7 @@ if (running && !tired)
 }
 else stamina -= 0.1 * fitness;
 
-if (tired)
+if (tired) && (energy > 0)
 {
 	staminatimer += 1 / room_speed;
 	if (staminatimer >= argument0)

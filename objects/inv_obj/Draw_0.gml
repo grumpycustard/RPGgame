@@ -23,16 +23,24 @@ if (menu == 0)
 }
 else var c = c_gray;
 
-nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag) + 32, c);
+nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y - boxwidth,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag) + 32, c);
+
+draw_set_font(large_fnt);
+draw_set_colour(c);
+draw_text(xhalf-(boxwidth*(invwidth/2)),inv_start_y - boxwidth + 4, "Inventory");
 
 // DRAW NINE SLICE BOX FOR EQUIPMENT --------------------------------------------------------------
 if (menu == 1)
 {
-	var c1 = c_white;
+	var c2 = c_white;
 }
-else var c1 = c_gray;
+else var c2 = c_gray;
+draw_set_colour(c2);
+nineslice_scr(nine_slice_spr,xpos+670,ypos+160-boxwidth,xpos+810,ypos+350+boxwidth,c2);
+draw_text(xpos+670, ypos+160-boxwidth+4, "Equipment");
 
-nineslice_scr(nine_slice_spr,xpos+670,ypos+160,xpos+810,ypos+350,c1);
+draw_set_font(normal_fnt);
+draw_set_colour(c_white);
 
 // DRAW INVENTORY SLOTS ---------------------------------------------------------------------------
 for (var i = 0; i < maxitems; i ++)
@@ -68,15 +76,20 @@ for (var i = 0; i < maxitems; i ++)
 	if (inventory[i,0] > 0)
 	{
 		draw_sprite(item_spr, inventory[i,0], xx + 4, yy - 4);
+		
+		// draw item quantity
+		draw_set_font(small_fnt);
 		if (inventory[i,1] > 1 && global.item[inventory[i,0],2] != 1)
 		{
-			draw_text(xx + 4, yy - 12, string(inventory[i,1]));
+			draw_text(xx + 4, yy - 8, string(inventory[i,1]));
 		}
 		
+		// draw item quality
 		if (global.item[inventory[i,0], 2] == 1)
 		{
-			draw_text(xx + 20, yy - 12, string(inventory[i,2]) + "%");
+			draw_text(xx + 24, yy - 8, string(inventory[i,2]) + "%");
 		}
+		draw_set_font(normal_fnt);
 	}
 }
 
@@ -84,7 +97,10 @@ for (var i = 0; i < maxitems; i ++)
 if (inventory[menu_slot, 0] > 0)
 {
 	draw_sprite(item_spr, inventory[menu_slot,0], xx-(boxwidth*5) + 4, inv_start_y+(boxwidth*player.bag) + 32);
-	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 8, string(global.item[inventory[menu_slot,0],0]));
+	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 4, string(global.item[inventory[menu_slot,0],0]));
+	draw_set_font(small_fnt);
+	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 16, string(global.item[inventory[menu_slot,0],0]));
+	draw_set_font(normal_fnt);
 }
 
 #endregion

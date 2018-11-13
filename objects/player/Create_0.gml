@@ -12,8 +12,8 @@ x_spd = 0;
 y_spd = 0;
 running = false;
 
-movediagonal = 3;
-movestraight = 4;
+movediagonal = 2;
+movestraight = 3;
 
 pickup = -1;
 

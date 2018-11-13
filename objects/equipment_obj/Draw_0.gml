@@ -23,20 +23,22 @@ if (e != 0)
 	draw_sprite(item_spr, e, x + 4, y - 4);
 }
 
+draw_set_font(small_fnt);
+
 // DRAW LOADED AMMO FOR RANGED WEAPONS ------------------------------------------------------------
 if (equipmentid == 7)
 {
 	if (inv_obj.equip[7,0] != 0)
 	{
-		draw_text(x+4, y-12, string(inv_obj.equip[7,2]));
+		draw_text(x+4, y-8, string(inv_obj.equip[7,2]));
 	}
 }
 
 // DRAW REMAINING DURABILITY OF EQUIPPED ITEM -----------------------------------------------------
 if (inv_obj.equip[equipmentid,0] > 0)
 {
-	draw_text(x + 20, y - 12, string(inv_obj.equip[equipmentid,1]) + "%");
+	draw_text(x + 24, y - 8, string(inv_obj.equip[equipmentid,1]) + "%");
 }
 
-
+draw_set_font(normal_fnt);
 

@@ -213,7 +213,7 @@ if (menu == 1)
 			}
 			else
 			{
-				inv_add_scr(equip[equip_slot,0], 1, equip[equip_slot,1]);
+				inv_add_scr(equip[equip_slot,0], equip[equip_slot,1], 0);
 				equip[equip_slot,0] = 0;
 				equip[equip_slot,1] = 0;
 			}
