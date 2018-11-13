@@ -40,7 +40,7 @@ effect[1,0] = "Infection";
 effect[1,1] = false;
 effect[2,0] = "Fever";
 effect[2,1] = false;
-effect[3,0] = "Sickness";
+effect[3,0] = "Food Poisoning";
 effect[3,1] = false;
 
 // ANIMATION ARRAY --------------------------------------------------------------------------------

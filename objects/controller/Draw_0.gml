@@ -19,6 +19,7 @@ else var b = 3;
 for (var i = 0; i < b; i ++)
 {
 	draw_sprite(statbox_spr, 0, xx + spacing + (spacing * i), yy + spacing);
+	draw_sprite(stat_icon_spr, i, xx + spacing + (spacing * i), yy + spacing + height + 3);
 }
 
 // clamp values
@@ -44,8 +45,8 @@ draw_text(x2 - (spacing*5), yy + (spacing*1), "Minutes: " + string(minutes - (60
 draw_text(x2 - (spacing*5), yy + (spacing*2), "Hours: " + string(hours - (24*(days))));
 draw_text(x2 - (spacing*5), yy + (spacing*3), "Days: " + string(days));
 
-// DRAW PLAYER STAMINA ----------------------------------------------------------------------------
-draw_pie(xx + (spacing * 2.5), yy + height + 40, bloo, 100, c_red, 20, 1, bloodloss_spr);
+// DRAW PLAYER BLOODLOSS --------------------------------------------------------------------------
+draw_pie(xx + (spacing * 2.5), yy + height + 50, bloo, 100, c_red, 20, 1, bloodloss_spr);
 if (bloo >= 90)
 {
 	alpha_s += flash_s;
@@ -53,7 +54,7 @@ if (bloo >= 90)
 	{
 		flash_s *= -1;
 	}
-	draw_sprite_ext(bloodloss_spr, 1, xx + (spacing * 2.5), yy + height + 40,1,1,0,-1,alpha_s);
+	draw_sprite_ext(bloodloss_spr, 1, xx + (spacing * 2.5), yy + height + 50,1,1,0,-1,alpha_s);
 }
 
 // DRAW RELOADING TIMER ---------------------------------------------------------------------------

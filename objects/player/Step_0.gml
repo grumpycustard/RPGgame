@@ -1,10 +1,3 @@
-// SET PAUSE STATE --------------------------------------------------------------------------------
-if (showinv) 
-{
-	image_speed = 0;
-	exit;
-}
-
 // clamp player stat values
 hunger = clamp(hunger, 0, 100);
 thirst = clamp(thirst, 0, 100);
@@ -20,9 +13,16 @@ if (state = states.normal)
 	hunger -= hungerrate*gamespeed;
 	thirst -= thirstrate*gamespeed;
 	energy -= energyrate*gamespeed;
-	if (bloodloss > 0 && !effect[0,1])
+	if (bloodloss > 0 && !effect[0,1] && hunger >= 50)
 	{
 		bloodloss -= healrate*gamespeed;
+	}
+	
+	// SET PAUSE STATE --------------------------------------------------------------------------------
+	if (showinv) 
+	{
+		image_speed = 0;
+		exit;
 	}
 	
 	// PICK UP ITEMS ------------------------------------------------------------------------------

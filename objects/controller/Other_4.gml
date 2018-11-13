@@ -1,1 +1,1 @@
-scale_for_devices_scr(2);
+scale_for_devices_scr(gamescale);

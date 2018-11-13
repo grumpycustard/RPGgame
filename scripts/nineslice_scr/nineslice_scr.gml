@@ -1,10 +1,10 @@
-///@descNineslice_scr
-///@argSprite
-///@argx1
-///@argy1
-///@argx2
-///@argy2
-///@argcolour
+///@desc Nineslice_scr
+///@arg Sprite
+///@arg x1
+///@arg y1
+///@arg x2
+///@arg y2
+///@arg colour
 
 var sprite = argument0;
 var size = sprite_get_width(sprite) / 3;

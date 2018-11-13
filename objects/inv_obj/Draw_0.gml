@@ -23,7 +23,7 @@ if (menu == 0)
 }
 else var c = c_gray;
 
-nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag), c);
+nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag) + 32, c);
 
 // DRAW NINE SLICE BOX FOR EQUIPMENT --------------------------------------------------------------
 if (menu == 1)
@@ -79,4 +79,12 @@ for (var i = 0; i < maxitems; i ++)
 		}
 	}
 }
+
+// draw item name and description
+if (inventory[menu_slot, 0] > 0)
+{
+	draw_sprite(item_spr, inventory[menu_slot,0], xx-(boxwidth*5) + 4, inv_start_y+(boxwidth*player.bag) + 32);
+	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 8, string(global.item[inventory[menu_slot,0],0]));
+}
+
 #endregion
