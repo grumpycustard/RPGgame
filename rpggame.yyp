@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "08ae1488-8fd9-49b7-a987-6b9f0bfd2630",
+            "Value": {
+                "id": "ac4591ea-fca9-4725-8f6f-a635d5e0597d",
+                "resourcePath": "sprites\\run_down\\run_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09b76264-ffce-4ba8-9b08-2ccca92fa5d3",
             "Value": {
                 "id": "64206089-7765-4c86-8ddb-1c56c45a53ed",
@@ -79,11 +87,27 @@
             }
         },
         {
+            "Key": "136190b3-42cd-4d51-a16d-e4b84b322272",
+            "Value": {
+                "id": "51b149cb-2424-4e25-a8bc-a18a1ce00a39",
+                "resourcePath": "sprites\\run_right\\run_right.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14a3d663-9c55-4375-9441-16e6692bcd5c",
             "Value": {
                 "id": "d23b04ec-bce1-4763-bc6a-8ba0f11113a0",
                 "resourcePath": "views\\14a3d663-9c55-4375-9441-16e6692bcd5c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "193a44ba-77cf-4b0e-8d43-aa09a11bf014",
+            "Value": {
+                "id": "4a333660-368b-421c-9114-11f893b7bfb9",
+                "resourcePath": "sprites\\idle_up\\idle_up.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -175,6 +199,14 @@
             }
         },
         {
+            "Key": "4750535e-5dc5-4a40-9110-ff7b843903b6",
+            "Value": {
+                "id": "7314a7aa-c6c6-40cd-b036-82fe063082bd",
+                "resourcePath": "sprites\\idle_right\\idle_right.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "47878362-de9b-43ca-bedf-fc2ad7bff905",
             "Value": {
                 "id": "d5df91fa-4b4c-4fed-9fc5-65fc80b4439f",
@@ -204,14 +236,6 @@
                 "id": "8130f8b0-1b08-4448-9ce5-58d2ea2c9f2c",
                 "resourcePath": "views\\4f6347a9-9dce-4530-8ae1-e3fcad6fa789.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "518931c6-07ce-4d41-a7d7-cff2e5d7d7db",
-            "Value": {
-                "id": "fa723c57-e615-487c-b3a5-6ffed21ea9c2",
-                "resourcePath": "sprites\\pickup_closest\\pickup_closest.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -271,6 +295,14 @@
             }
         },
         {
+            "Key": "7d664657-94cf-4505-a236-36f993051cdb",
+            "Value": {
+                "id": "0d16470b-4b74-4449-be5e-ec6078b87ff7",
+                "resourcePath": "sprites\\run_up\\run_up.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7e5b36de-4774-414e-bc3e-cf8a3140750d",
             "Value": {
                 "id": "9141684b-0965-475b-9e6c-5a8dadda16a6",
@@ -283,6 +315,14 @@
             "Value": {
                 "id": "d801b2b4-6356-4aa7-afdd-7598d829c8a6",
                 "resourcePath": "sprites\\nine_slice_spr\\nine_slice_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "85e9bc02-59e9-4936-9f8c-18e3ef9b8d5e",
+            "Value": {
+                "id": "a7423dfa-7078-4031-9132-7dc45a3a5ff9",
+                "resourcePath": "sprites\\run_left\\run_left.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -380,6 +420,22 @@
                 "id": "4aea004e-73cf-47df-80e7-04d50642a96d",
                 "resourcePath": "views\\b89b21f9-8959-405d-8adb-4271cda96d47.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b9124f71-8e6f-486a-8981-1b0fb0889a3c",
+            "Value": {
+                "id": "7251dac5-b885-410a-b1fb-2041b35873c9",
+                "resourcePath": "sprites\\idle_left\\idle_left.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bb8a5bfa-d74f-4cbf-8692-a23debac061f",
+            "Value": {
+                "id": "d1f64378-b2df-45ef-a5b2-350e342c2eb2",
+                "resourcePath": "sprites\\idle_down\\idle_down.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

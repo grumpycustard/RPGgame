@@ -49,6 +49,16 @@ anim[1] = walk_up;
 anim[2] = walk_left;
 anim[3] = walk_down;
 
+idle[0] = idle_right;
+idle[1] = idle_up;
+idle[2] = idle_left;
+idle[3] = idle_down;
+
+runn[0] = run_right;
+runn[1] = run_up;
+runn[2] = run_left;
+runn[3] = run_down;
+
 // SET INITIAL STATE ------------------------------------------------------------------------------
 state = states.normal;
 

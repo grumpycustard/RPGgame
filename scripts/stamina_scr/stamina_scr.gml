@@ -4,6 +4,7 @@ if (run)
 {
 	running = true;
 }
+else running = false;
 	
 if (x_spd = 0 && y_spd == 0) || (tired) || (energy == 0)
 {	

@@ -6,7 +6,7 @@ maxitems = player.bag * invwidth;
 menu = 0;			// currently selected menu
 max_menu = 2;		// how many menus are there
 menu_slot = 0;		// currently selected inventory slot
-maxequipment = 8;	// max number of equipment slots
+maxequipment = 9;	// max number of equipment slots
 equip_slot = 0;		// player equipment slot currently selected
 
 reloading = false;

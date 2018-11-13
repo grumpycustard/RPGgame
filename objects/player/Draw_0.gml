@@ -1,4 +1,24 @@
-draw_self();
+draw_self()
 
-draw_text(x, y+10, string(inv_obj.equip[7,0]));
-draw_text(x, y+20, string(inv_check_scr(14)));
+if (state = states.normal)
+{
+	if (x_spd == 0 && y_spd == 0)
+	{
+		// draw hair
+		// draw boots
+		// draw trousers
+		// draw gloves
+		// draw body
+		// draw outerwear
+		// draw hat
+		// draw bag
+	}
+	else if (running)
+	{
+		
+	}
+	else
+	{
+		
+	}
+}

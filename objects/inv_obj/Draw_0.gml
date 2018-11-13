@@ -23,7 +23,7 @@ if (menu == 0)
 }
 else var c = c_gray;
 
-nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y - boxwidth,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag) + 32, c);
+nineslice_scr(nine_slice_spr,xhalf-(boxwidth*(invwidth/2)),inv_start_y - boxwidth,xhalf+(boxwidth*(invwidth/2)),inv_start_y+(boxwidth*player.bag) + 64, c);
 
 draw_set_font(large_fnt);
 draw_set_colour(c);
@@ -36,7 +36,7 @@ if (menu == 1)
 }
 else var c2 = c_gray;
 draw_set_colour(c2);
-nineslice_scr(nine_slice_spr,xpos+670,ypos+160-boxwidth,xpos+810,ypos+350+boxwidth,c2);
+nineslice_scr(nine_slice_spr,xpos+670,ypos+160-boxwidth,xpos+810,ypos+350+64,c2);
 draw_text(xpos+670, ypos+160-boxwidth+4, "Equipment");
 
 draw_set_font(normal_fnt);
@@ -103,4 +103,13 @@ if (inventory[menu_slot, 0] > 0)
 	draw_set_font(normal_fnt);
 }
 
+// draw equippment name and description
+if (equip[equip_slot, 0] > 0)
+{
+	draw_sprite(item_spr, equip[equip_slot,0], xpos+670, ypos+350+32);
+	draw_text(xpos+670+boxwidth, ypos+350+4, string(global.item[equip[equip_slot,0],0]));
+	draw_set_font(small_fnt);
+	draw_text(xpos+670+boxwidth, ypos+350+16, string(global.item[equip[equip_slot,0],0]));
+	draw_set_font(normal_fnt);
+}
 #endregion

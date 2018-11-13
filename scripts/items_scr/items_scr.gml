@@ -22,7 +22,9 @@
 		5 = melee weapon
 		6 = bag
 		7 = ranged weapon
+		8 = gloves
 		
+	if clothing
 	4 = warmth rating
 	5 = armour rating
 	6 = speed of wear
@@ -160,4 +162,12 @@ global.item[14,2] = 2;
 global.item[14,3] = 10;
 global.item[14,4] = 0.6;
 global.item[14,5] = 1;
+
+global.item[15,0] = "Warm gloves";
+global.item[15,1] = false;
+global.item[15,2] = 1;
+global.item[15,3] = 8;
+global.item[15,4] = 2;
+global.item[15,5] = 1;
+global.item[15,6] = 1;
 

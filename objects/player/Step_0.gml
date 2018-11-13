@@ -65,19 +65,20 @@ if (state = states.normal)
 	collision_scr();
 
 	// ANIMATION ----------------------------------------------------------------------------------
-	sprite_index = anim[angle];
 	if (x_spd == 0 && y_spd == 0)
 	{
-		image_speed = 0;
-		image_index = 0;
+		sprite_index = idle[angle];
+		image_speed = 0.3;
 	}
 	else if (running)
 	{
-		image_speed = 1;
+		sprite_index = runn[angle];
+		image_speed = 0.9;
 	}
 	else
 	{
-		image_speed = 0.7;
+		sprite_index = anim[angle];
+		image_speed = 0.65;
 	}
 }
 
