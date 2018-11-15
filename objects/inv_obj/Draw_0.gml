@@ -96,20 +96,20 @@ for (var i = 0; i < maxitems; i ++)
 // draw item name and description
 if (inventory[menu_slot, 0] > 0)
 {
-	draw_sprite(item_spr, inventory[menu_slot,0], xx-(boxwidth*5) + 4, inv_start_y+(boxwidth*player.bag) + 32);
+	draw_sprite(item_spr, inventory[menu_slot,0], xx-(boxwidth*5) + 6, inv_start_y+(boxwidth*player.bag) + 32);
 	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 4, string(global.item[inventory[menu_slot,0],0]));
 	draw_set_font(small_fnt);
-	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 16, string(global.item[inventory[menu_slot,0],0]));
+	draw_text(xx-(boxwidth*5) + 48, inv_start_y+(boxwidth*player.bag) + 18, string(global.item[inventory[menu_slot,0],0]));
 	draw_set_font(normal_fnt);
 }
 
 // draw equippment name and description
 if (equip[equip_slot, 0] > 0)
 {
-	draw_sprite(item_spr, equip[equip_slot,0], xpos+670, ypos+350+32);
+	draw_sprite(item_spr, equip[equip_slot,0], xpos+670, ypos+350+34);
 	draw_text(xpos+670+boxwidth, ypos+350+4, string(global.item[equip[equip_slot,0],0]));
 	draw_set_font(small_fnt);
-	draw_text(xpos+670+boxwidth, ypos+350+16, string(global.item[equip[equip_slot,0],0]));
+	draw_text(xpos+670+boxwidth, ypos+350+18, string(global.item[equip[equip_slot,0],0]));
 	draw_set_font(normal_fnt);
 }
 #endregion
