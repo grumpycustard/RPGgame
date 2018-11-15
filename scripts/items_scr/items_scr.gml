@@ -5,6 +5,7 @@
 		0 = edible
 		1 = wearable equipment
 		2 = ammo
+		3 = consumable
 	
 	IF ITEM IS EDIBLE (item identifier 0) ---------------------------------------------------------
 	3 = How much hunger does item restore
@@ -44,6 +45,11 @@
 	3 = damage
 	4 = shot delay in seconds
 	5 = reload speed in seconds
+	
+	IF ITEM IS CONSUMABLE (item identifier 3) -----------------------------------------------------
+	3 = medical - stops bleeding
+	4 = medical - stops infection
+	5 = medical - stops fever
 
 
 */
@@ -171,3 +177,7 @@ global.item[15,4] = 2;
 global.item[15,5] = 1;
 global.item[15,6] = 1;
 
+global.item[16,0] = "Bandage";
+global.item[16,1] = true;
+global.item[16,2] = 3;
+global.item[16,3] = 3;
