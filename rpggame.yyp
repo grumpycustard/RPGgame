@@ -370,7 +370,7 @@
             "Key": "7c8bc7c2-5e88-40ae-8e46-b4265d5d3cc7",
             "Value": {
                 "id": "d292bcba-5ddc-40d8-a77a-22e185f211be",
-                "resourcePath": "sprites\\road_tileset\\road_tileset.yy",
+                "resourcePath": "sprites\\city_tileset\\city_tileset.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -516,6 +516,14 @@
                 "id": "5118e59c-2739-4333-bcb6-262c9f66e87b",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a951cf8b-fd50-44dd-9a77-63bf08321f9c",
+            "Value": {
+                "id": "dc6bf282-926e-476a-bb52-9b7c4c9c406b",
+                "resourcePath": "tilesets\\ground_ts\\ground_ts.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -748,6 +756,14 @@
                 "id": "cd80958b-eee6-41f2-82e0-4c8f31f8b6fa",
                 "resourcePath": "fonts\\large_fnt\\large_fnt.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "fc46f762-4fd1-4576-9d17-ffd925a84843",
+            "Value": {
+                "id": "72f95ef8-cf96-47ee-8c6f-f456185058c0",
+                "resourcePath": "sprites\\groound_tileset\\groound_tileset.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

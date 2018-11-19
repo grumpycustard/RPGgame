@@ -2,7 +2,7 @@
     "id": "7c8bc7c2-5e88-40ae-8e46-b4265d5d3cc7",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "road_tileset",
+    "name": "city_tileset",
     "For3D": false,
     "HTile": false,
     "VTile": false,
@@ -16,34 +16,34 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "b52c6ad8-bdc7-4d1a-95c4-9cc8db304947",
+            "id": "6c8bf664-1ed5-44f7-842c-a84272d607fe",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "7c8bc7c2-5e88-40ae-8e46-b4265d5d3cc7",
             "compositeImage": {
-                "id": "5b498eb2-79cb-4536-be76-bfc06d687314",
+                "id": "f4c7c1e9-1b60-49d4-82ed-db6421c49779",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "b52c6ad8-bdc7-4d1a-95c4-9cc8db304947",
+                "FrameId": "6c8bf664-1ed5-44f7-842c-a84272d607fe",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "ea33d77f-2ccd-4b73-bbcf-b529a1088dab",
+                    "id": "3969e9d1-4f24-451f-99bc-4226cf18c9a2",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "b52c6ad8-bdc7-4d1a-95c4-9cc8db304947",
-                    "LayerId": "89e7b3b2-a82b-4e3c-80a5-5907fab7f232"
+                    "FrameId": "6c8bf664-1ed5-44f7-842c-a84272d607fe",
+                    "LayerId": "29da93f1-6469-40e9-b4f6-48f573ef8956"
                 }
             ]
         }
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 64,
+    "height": 96,
     "layers": [
         {
-            "id": "89e7b3b2-a82b-4e3c-80a5-5907fab7f232",
+            "id": "29da93f1-6469-40e9-b4f6-48f573ef8956",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
             "SpriteId": "7c8bc7c2-5e88-40ae-8e46-b4265d5d3cc7",
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 128,
     "xorig": 64,
-    "yorig": 63
+    "yorig": 95
 }
