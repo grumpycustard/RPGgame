@@ -2,7 +2,7 @@
     "id": "107fc64b-a9fc-4425-94cb-cb2637da16b4",
     "modelName": "GMTileSet",
     "mvc": "1.11",
-    "name": "tileset0",
+    "name": "city_ts",
     "auto_tile_sets": [
         {
             "id": "f1d772d8-35c3-4c95-bc98-2f1d07bae71a",
@@ -28,6 +28,31 @@
                 1,
                 0
             ]
+        },
+        {
+            "id": "983a7685-d637-493e-b2af-b0c6e4d3ecd7",
+            "modelName": "GMAutoTileSet",
+            "mvc": "1.0",
+            "closed_edge": false,
+            "name": "pavement_at",
+            "tiles": [
+                31,
+                30,
+                29,
+                28,
+                27,
+                26,
+                25,
+                24,
+                23,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                0
+            ]
         }
     ],
     "macroPageTiles": {
@@ -38,7 +63,7 @@
             
         ]
     },
-    "out_columns": 4,
+    "out_columns": 6,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
     "spriteId": "7c8bc7c2-5e88-40ae-8e46-b4265d5d3cc7",
@@ -62,7 +87,23 @@
             12,
             13,
             14,
-            15
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
         ],
         "SerialiseFrameCount": 1
     },
@@ -70,7 +111,7 @@
         
     ],
     "tile_animation_speed": 15,
-    "tile_count": 16,
+    "tile_count": 32,
     "tileheight": 16,
     "tilehsep": 0,
     "tilevsep": 0,

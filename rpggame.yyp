@@ -82,7 +82,7 @@
             "Key": "107fc64b-a9fc-4425-94cb-cb2637da16b4",
             "Value": {
                 "id": "284e61ee-8374-44c1-98a5-725c004da1b8",
-                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourcePath": "tilesets\\city_ts\\city_ts.yy",
                 "resourceType": "GMTileSet"
             }
         },

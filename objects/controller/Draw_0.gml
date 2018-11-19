@@ -63,17 +63,20 @@ if (inv_obj.reloading == true)
 	draw_pie(xx+(w/2), yy+(h/2), inv_obj.reloadtimer,  global.item[inv_obj.equip[7,0] + 1, 5], c_white, 20, 1, reload_spr);
 }
 
-if (instance_exists(item))
+if (!player.showinv)
 {
-	with(item)
+	if (instance_exists(item))
 	{
-		if (closest)
+		with(item)
 		{
-			draw_text(x+10, y-8, string(global.item[image_index,0]));
-		}
-		if (distance_to_object(player) < 150)
-		{
-			draw_sprite(grounditemhighlight_spr, image_index, x, y);
+			if (closest)
+			{
+				draw_text(x+10, y-8, string(global.item[image_index,0]));
+			}
+			if (distance_to_object(player) < 150)
+			{
+				draw_sprite(grounditemhighlight_spr, image_index, x, y);
+			}
 		}
 	}
 }
