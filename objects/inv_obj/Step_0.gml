@@ -132,7 +132,7 @@ if (onedown)
 #endregion
 
 #region// CONTROL INVENTORY ITEM USAGE ------------------------------------------------------------
-if (menu == 0)
+if (menu == 0 && !position_meeting(mouse_x, mouse_y, inventory_button))
 {
 	if (drop)
 	{
@@ -179,7 +179,7 @@ if (menu == 0)
 #endregion
 
 #region// CONTROL PLAYER EQUIPMENT ----------------------------------------------------------------
-if (menu == 1)
+if (menu == 1 && !position_meeting(mouse_x, mouse_y, inventory_button))
 {
 	if (drop || action || use)
 	{

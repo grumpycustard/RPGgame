@@ -9,7 +9,8 @@ oneleft = keyboard_check_pressed(ord("A"));
 onedown = keyboard_check_pressed(ord("S"));
 
 run = keyboard_check(vk_shift);
-action = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left);
+action = keyboard_check_pressed(vk_space);
+attack = mouse_check_button_pressed(mb_left);
 drop = keyboard_check_pressed(ord("F")) || mouse_check_button_pressed(mb_right);
 use = keyboard_check_pressed(ord("E")) || mouse_check_button_pressed(mb_middle);
 toggle = keyboard_check_pressed(ord("Q"));
